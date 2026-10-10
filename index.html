@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متجر فارس — عطور فاخرة</title>
+    <meta name="description" content="متجر فارس للعطور: عطور شرقية وفرنسية فاخرة، اطلب أونلاين بسهولة والدفع عند الاستلام." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-cream text-ink antialiased">
+    <!-- NAV -->
+    <header class="sticky top-0 z-40 border-b border-gold/20 bg-wine text-cream">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="#" class="flex items-center gap-2">
+          <span class="font-display text-2xl text-gold">فارس</span>
+          <span class="hidden text-xs tracking-widest text-cream/60 sm:inline">للعطور</span>
+        </a>
+        <nav class="hidden gap-8 text-sm font-medium md:flex">
+          <a href="#shop" class="hover:text-gold">المتجر</a>
+          <a href="#about" class="hover:text-gold">عن فارس</a>
+          <a href="#how" class="hover:text-gold">طريقة الطلب</a>
+        </nav>
+        <button data-cart-open class="relative flex items-center gap-2 rounded-full border border-gold/50 px-4 py-2 text-sm font-semibold hover:bg-gold hover:text-wine">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h12l-1 13H7L6 7zm3 0a3 3 0 016 0"/></svg>
+          السلة
+          <span data-cart-count class="absolute -top-2 -left-2 hidden h-5 min-w-5 items-center justify-center rounded-full bg-gold px-1 text-xs font-bold text-wine">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-wine text-cream">
+      <div class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at 20% 30%, #d4af37 0, transparent 40%), radial-gradient(circle at 85% 80%, #d4af37 0, transparent 35%)"></div>
+      <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+        <div>
+          <p class="mb-4 inline-block rounded-full border border-gold/40 px-4 py-1 text-xs font-semibold text-gold">عطور شرقية وفرنسية</p>
+          <h1 class="font-display text-4xl leading-snug md:text-6xl">عطرك يحكي <span class="text-gold">حضورك</span></h1>
+          <p class="mt-6 max-w-md text-lg text-cream/80">تشكيلة مختارة من العود والمسك والعطور الفرنسية. اختر عطرك، أرسل طلبك بضغطة، وادفع عند الاستلام.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#shop" class="rounded-full bg-gold px-7 py-3 font-bold text-wine hover:bg-gold-light">تسوّق الآن</a>
+            <a href="#how" class="rounded-full border border-cream/30 px-7 py-3 font-semibold hover:bg-cream/10">كيف أطلب؟</a>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="relative h-80 w-64 md:h-96 md:w-72" data-hero-bottle></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BADGES -->
+    <section class="border-b border-gold/20 bg-white">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 py-6 text-center text-sm md:grid-cols-4">
+        <div><p class="font-bold text-wine">الدفع عند الاستلام</p><p class="text-ink/60">بدون بطاقة</p></div>
+        <div><p class="font-bold text-wine">توصيل لكل المدن</p><p class="text-ink/60">داخل المملكة</p></div>
+        <div><p class="font-bold text-wine">عطور أصلية</p><p class="text-ink/60">جودة مضمونة</p></div>
+        <div><p class="font-bold text-wine">تغليف هدايا</p><p class="text-ink/60">جاهز للإهداء</p></div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="font-display text-3xl text-wine md:text-4xl">تشكيلة فارس</h2>
+          <p class="mt-2 text-ink/60">اختر الفئة، وأضف للسلة.</p>
+        </div>
+        <div class="flex flex-wrap gap-2" data-filters></div>
+      </div>
+      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-6" data-products></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-wine-dark py-16 text-cream">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2">
+        <div>
+          <h2 class="font-display text-3xl text-gold md:text-4xl">عن متجر فارس</h2>
+          <p class="mt-4 leading-loose text-cream/80">نؤمن أن العطر جزء من الشخصية. لذلك نختار كل عطر بعناية، من دهن العود الفاخر إلى العطور الفرنسية الخفيفة، ونوصله لك مغلفًا بعناية وجاهزًا للاستخدام أو الإهداء.</p>
+        </div>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="rounded-2xl border border-gold/30 p-5"><p class="font-display text-3xl text-gold">+40</p><p class="mt-1 text-sm text-cream/70">عطر مختار</p></div>
+          <div class="rounded-2xl border border-gold/30 p-5"><p class="font-display text-3xl text-gold">24</p><p class="mt-1 text-sm text-cream/70">ساعة تجهيز</p></div>
+          <div class="rounded-2xl border border-gold/30 p-5"><p class="font-display text-3xl text-gold">100%</p><p class="mt-1 text-sm text-cream/70">أصلي</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-center font-display text-3xl text-wine md:text-4xl">طريقة الطلب</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-white p-7 text-center shadow-sm"><div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 font-bold text-wine">١</div><h3 class="font-bold">اختر عطرك</h3><p class="mt-2 text-sm text-ink/60">أضف العطور اللي تعجبك للسلة.</p></div>
+        <div class="rounded-2xl bg-white p-7 text-center shadow-sm"><div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 font-bold text-wine">٢</div><h3 class="font-bold">أكمل بياناتك</h3><p class="mt-2 text-sm text-ink/60">الاسم والجوال والمدينة والعنوان.</p></div>
+        <div class="rounded-2xl bg-white p-7 text-center shadow-sm"><div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 font-bold text-wine">٣</div><h3 class="font-bold">استلم وادفع</h3><p class="mt-2 text-sm text-ink/60">نأكد طلبك ونوصله، والدفع عند الاستلام.</p></div>
+      </div>
+    </section>
+
+    <footer class="bg-wine py-8 text-center text-sm text-cream/70">
+      <p class="font-display text-xl text-gold">متجر فارس</p>
+      <p class="mt-2">© <span data-year></span> جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- CART DRAWER -->
+    <div data-cart class="fixed inset-0 z-50 hidden">
+      <div data-cart-close class="absolute inset-0 bg-black/50"></div>
+      <aside class="absolute left-0 top-0 flex h-full w-full max-w-md flex-col bg-cream shadow-2xl">
+        <div class="flex items-center justify-between bg-wine px-5 py-4 text-cream">
+          <h3 class="font-display text-xl text-gold">سلة المشتريات</h3>
+          <button data-cart-close class="text-2xl leading-none" aria-label="إغلاق">×</button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-5" data-cart-items></div>
+        <form data-checkout class="space-y-3 border-t border-gold/30 bg-white p-5">
+          <div class="flex justify-between text-lg font-bold"><span>الإجمالي</span><span data-cart-total>0 ر.س</span></div>
+          <div class="grid grid-cols-2 gap-3">
+            <input required name="name" placeholder="الاسم" class="rounded-lg border border-ink/15 px-3 py-2" />
+            <input required name="phone" type="tel" placeholder="رقم الجوال" class="rounded-lg border border-ink/15 px-3 py-2" />
+          </div>
+          <input required name="city" placeholder="المدينة" class="w-full rounded-lg border border-ink/15 px-3 py-2" />
+          <input required name="address" placeholder="الحي والعنوان" class="w-full rounded-lg border border-ink/15 px-3 py-2" />
+          <p class="text-xs text-ink/60">الدفع عند الاستلام. سيتم تأكيد طلبك عبر واتساب.</p>
+          <button class="w-full rounded-full bg-wine py-3 font-bold text-gold hover:bg-wine-dark disabled:opacity-40" data-submit>إرسال الطلب</button>
+        </form>
+      </aside>
+    </div>
+
+    <!-- TOAST -->
+    <div data-toast class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-full bg-wine px-5 py-3 text-sm font-semibold text-gold opacity-0 shadow-lg transition"></div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
